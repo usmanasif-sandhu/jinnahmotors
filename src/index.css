@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --color-gold: #c5a059;
+  --color-gold-light: #e8d5a8;
+  --color-gold-dark: #9a7a3c;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    color-scheme: only light;
+    background-color: #ffffff;
+    color: #111827;
+  }
+
+  #root {
+    min-height: 100svh;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    text-align: inherit;
+    border: none;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-xl bg-white/75 border border-white/60 shadow-lg;
+  }
+
+  .glass-dark {
+    @apply backdrop-blur-xl bg-neutral-950/40 border border-white/10 shadow-xl;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  @keyframes shimmer {
+    0%,
+    100% {
+      opacity: 0.65;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.06);
+    }
+  }
+
+  .animate-shimmer-soft {
+    animation: shimmer 2.4s ease-in-out infinite;
+  }
+}
