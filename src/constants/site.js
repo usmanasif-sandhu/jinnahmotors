@@ -15,7 +15,7 @@ export const whatsappHref = (
   `https://wa.me/${SITE.whatsappDigits}?text=${encodeURIComponent(body)}`
 
 export const SOCIAL = {
-  instagram: 'https://www.instagram.com/',
-  facebook: 'https://www.facebook.com/',
-  tiktok: 'https://www.tiktok.com/',
+  instagram: 'https://www.instagram.com/jinnah_motors_gujrat/?hl=en',
+  facebook: 'https://www.facebook.com/p/Jinnah-motors-100064184340651/',
+  tiktok: 'https://www.tiktok.com/@jinnah_motors_gujrat',
 }
