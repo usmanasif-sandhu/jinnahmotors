@@ -1,21 +1,23 @@
 import { motion } from 'framer-motion'
 import { HiArrowRight, HiOutlineSparkles } from 'react-icons/hi'
-import { whatsappHref } from '../constants/site'
+import { heroImage } from '../constants/carImages'
+import { SITE, whatsappHref } from '../constants/site'
+import { formatPkr } from '../data/cars'
 
 const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.12, delayChildren: 0.18 },
+    transition: { staggerChildren: 0.1, delayChildren: 0.15 },
   },
 }
 
 const item = {
-  hidden: { opacity: 0, y: 28 },
+  hidden: { opacity: 0, y: 32 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.72, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] },
   },
 }
 
@@ -23,53 +25,61 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative isolate min-h-[100svh] overflow-hidden px-6 pb-28 pt-32 md:pb-36 md:pt-40 lg:pb-44"
+      className="relative isolate min-h-[100svh] overflow-hidden section-pad pb-28 pt-28 md:pb-36 md:pt-36 lg:pb-44"
       aria-labelledby="hero-heading"
     >
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-20">
-        <div
-          className="absolute inset-0 bg-cover bg-[center_top] bg-neutral-950"
-          style={{
-            backgroundImage:
-              'url(https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=2200&q=80)',
-          }}
+        <img
+          src={heroImage}
+          alt="Mercedes-Maybach S680 luxury executive car rental Pakistan"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          width={2200}
+          height={1400}
         />
-        <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-neutral-50 via-neutral-50/75 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/85 via-neutral-950/45 to-neutral-900/30" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(197,160,89,0.28),_transparent_55%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/90 via-neutral-950/70 to-neutral-950/95" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(201,169,98,0.22),transparent_50%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#fafafa] to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-12 lg:flex-row lg:items-end lg:justify-between">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-14 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
-          className="max-w-2xl space-y-7 text-white"
+          className="max-w-3xl space-y-8 text-white"
         >
           <motion.div
             variants={item}
-            className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-light shadow-[0_0_0_1px_rgba(255,255,255,0.08)] backdrop-blur-md"
+            className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-light backdrop-blur-md"
           >
-            <HiOutlineSparkles className="text-base text-gold-light" />
-            Gujrat&apos;s Signature Fleet
+            <HiOutlineSparkles className="text-base" />
+            {SITE.tagline}
           </motion.div>
 
           <motion.h1
             id="hero-heading"
             variants={item}
-            className="text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl"
+            className="font-display text-balance text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.5rem]"
           >
-            Premium Car Rental Services in{' '}
-            <span className="bg-gradient-to-r from-gold-light via-gold to-amber-200 bg-clip-text text-transparent">
-              Gujrat
-            </span>
+            {SITE.heroHeading.split('Across Pakistan')[0]}
+            <span className="gold-gradient-text">Across Pakistan</span>
           </motion.h1>
 
           <motion.p
             variants={item}
-            className="max-w-xl text-base text-neutral-200/90 sm:text-lg"
+            className="max-w-2xl text-base leading-relaxed text-neutral-300 sm:text-lg"
           >
-            Luxury • Comfort • Professional Drivers • Affordable Packages
+            Luxury fleet · Executive chauffeurs · Wedding convoys · VIP
+            transport — serving{' '}
+            {SITE.cities.map((c, i) => (
+              <span key={c}>
+                {i > 0 && (i === SITE.cities.length - 1 ? ' & ' : ', ')}
+                <strong className="font-medium text-white">{c}</strong>
+              </span>
+            ))}
+            .
           </motion.p>
 
           <motion.div
@@ -78,89 +88,91 @@ export default function Hero() {
           >
             <motion.a
               href={whatsappHref(
-                'Hi Jinnah Motors, I would like to book a car. Please share availability.',
+                'Hi Jinnah Motors, I would like to book a luxury car. Please share availability.',
               )}
               target="_blank"
-              rel="noreferrer"
-              whileHover={{ y: -2, scale: 1.01 }}
+              rel="noopener noreferrer"
+              whileHover={{ y: -3, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold-dark via-gold to-gold-light px-7 py-3 text-sm font-semibold text-neutral-950 shadow-[0_22px_60px_-18px_rgba(197,160,89,0.75)] ring-1 ring-white/40"
+              className="btn-primary"
             >
               Book Now
               <HiArrowRight className="text-lg" />
             </motion.a>
             <motion.a
-              href="#cars"
-              whileHover={{ y: -2, scale: 1.01 }}
+              href="#fleet-showcase"
+              whileHover={{ y: -3, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/35 bg-white/10 px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_60px_-30px_rgba(15,23,42,0.9)] backdrop-blur-md"
+              className="btn-outline"
             >
-              View Cars
+              Explore Luxury Fleet
             </motion.a>
           </motion.div>
 
           <motion.dl
             variants={item}
-            className="grid max-w-xl grid-cols-3 gap-4 border-t border-white/15 pt-8 text-xs text-neutral-200/90 sm:text-sm"
+            className="grid max-w-2xl grid-cols-2 gap-6 border-t border-white/10 pt-8 sm:grid-cols-4"
           >
-            <div>
-              <dt className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold-light/90">
-                Fleet
-              </dt>
-              <dd className="mt-1 text-sm font-medium text-white sm:text-base">
-                Sedan · SUV · VIP
-              </dd>
-            </div>
-            <div>
-              <dt className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold-light/90">
-                Coverage
-              </dt>
-              <dd className="mt-1 text-sm font-medium text-white sm:text-base">
-                City &amp; Motorway
-              </dd>
-            </div>
-            <div>
-              <dt className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold-light/90">
-                Support
-              </dt>
-              <dd className="mt-1 text-sm font-medium text-white sm:text-base">
-                24/7 WhatsApp
-              </dd>
-            </div>
+            {[
+              { label: 'Fleet Size', value: '28+ Vehicles' },
+              { label: 'Ultra Luxury', value: 'Mercedes · BMW · Bentley' },
+              { label: 'Coverage', value: 'Nationwide' },
+              { label: 'Support', value: '24/7 WhatsApp' },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <dt className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold-light/80">
+                  {stat.label}
+                </dt>
+                <dd className="mt-1.5 text-sm font-medium text-white sm:text-[15px]">
+                  {stat.value}
+                </dd>
+              </div>
+            ))}
           </motion.dl>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
+        <motion.aside
+          initial={{ opacity: 0, y: 48 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-md self-stretch lg:self-auto"
+          transition={{ delay: 0.4, duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
+          className="relative w-full max-w-md lg:shrink-0"
+          aria-label="Featured rental highlight"
         >
-          <div className="glass relative overflow-hidden rounded-[28px] p-6 text-left text-neutral-900 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.75)]">
-            <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br from-gold/40 to-transparent blur-3xl" />
-            <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-neutral-500">
-              Signature Experience
+          <div className="glass-dark relative overflow-hidden rounded-[32px] border border-white/10 p-7 text-left shadow-[0_40px_100px_-40px_rgba(0,0,0,0.8)]">
+            <div className="pointer-events-none absolute -right-12 -top-12 h-48 w-48 rounded-full bg-gold/20 blur-3xl" />
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-light/80">
+              Executive Concierge
             </p>
-            <p className="mt-3 text-lg font-semibold leading-snug text-neutral-900">
-              Curated vehicles, hotel-grade cabin prep, and chauffeurs trained
-              for premium hospitality.
+            <p className="mt-4 font-display text-2xl font-semibold leading-snug text-white">
+              From Prado to Maybach — one trusted partner for every milestone.
             </p>
-            <div className="mt-5 flex items-center justify-between rounded-2xl bg-neutral-50/80 p-4 ring-1 ring-neutral-200/80">
-              <div>
-                <p className="text-xs text-neutral-500">Starting from</p>
-                <p className="text-xl font-semibold text-neutral-900">
-                  PKR 7,000{' '}
-                  <span className="text-sm font-medium text-neutral-500">
-                    / day
-                  </span>
-                </p>
+            <div className="mt-6 space-y-3 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-neutral-400">Economy from</span>
+                <span className="text-sm font-semibold text-white">
+                  {formatPkr(3500)}
+                  <span className="text-xs font-normal text-neutral-500">/day</span>
+                </span>
               </div>
-              <div className="rounded-full bg-neutral-950 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-light">
-                No hidden fees
+              <div className="h-px bg-white/10" />
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-neutral-400">Ultra luxury from</span>
+                <span className="text-sm font-semibold gold-gradient-text">
+                  {formatPkr(100000)}
+                  <span className="text-xs font-normal text-neutral-500">/day</span>
+                </span>
               </div>
             </div>
+            <motion.a
+              href="#cars"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="mt-6 flex w-full items-center justify-center rounded-full bg-white px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-950"
+            >
+              View Full Fleet
+            </motion.a>
           </div>
-        </motion.div>
+        </motion.aside>
       </div>
     </section>
   )

@@ -4,7 +4,8 @@ import { SITE, SOCIAL } from '../constants/site'
 
 const quick = [
   { href: '#home', label: 'Home' },
-  { href: '#cars', label: 'Cars' },
+  { href: '#fleet-showcase', label: 'Luxury Fleet' },
+  { href: '#cars', label: 'All Cars' },
   { href: '#packages', label: 'Packages' },
   { href: '#about', label: 'About' },
   { href: '#contact', label: 'Contact' },
@@ -26,8 +27,9 @@ export default function Footer() {
             {SITE.name}
           </p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-neutral-400">
-            Bespoke chauffeur-grade transport for Gujrat&apos;s milestones — from
-            executive arrivals to marquee-lit baraat choreography.
+            Pakistan&apos;s trusted luxury car rental — executive transport,
+            wedding convoys &amp; VIP fleet hire across Gujrat, Lahore,
+            Islamabad &amp; Karachi.
           </p>
           <div className="mt-6 flex gap-4">
             {[

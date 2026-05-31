@@ -11,14 +11,14 @@ export default function PackagesSection() {
   return (
     <section
       id="packages"
-      className="relative scroll-mt-28 overflow-hidden bg-gradient-to-b from-neutral-950 via-neutral-950 to-neutral-900 px-6 py-20 text-white md:scroll-mt-32 md:py-28"
+      className="relative scroll-mt-28 overflow-hidden premium-gradient section-pad text-white md:scroll-mt-32"
       aria-labelledby="packages-heading"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(197,160,89,0.35),transparent_55%)]" />
       <div className="pointer-events-none absolute -left-32 top-1/3 h-72 w-72 rounded-full bg-gold/30 blur-3xl" />
       <div className="pointer-events-none absolute -right-10 bottom-0 h-64 w-64 rounded-full bg-amber-300/25 blur-3xl" />
 
-      <div className="relative mx-auto max-w-6xl">
+      <div className="relative mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 26 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,18 +32,15 @@ export default function PackagesSection() {
           </p>
           <h2
             id="packages-heading"
-            className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-4xl"
+            className="font-display mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl"
           >
-            Sculpted wedding transport with{' '}
-            <span className="bg-gradient-to-r from-gold-light via-amber-200 to-gold bg-clip-text text-transparent">
-              golden precision
-            </span>
-            .
+            Wedding car rental Pakistan —{' '}
+            <span className="gold-gradient-text">golden precision</span>
           </h2>
-          <p className="mt-4 text-sm leading-relaxed text-neutral-300 sm:text-[15px]">
-            Layered convoys, groom entry theatrics, and multi-day guest
-            routing — each package is choreographed with the same obsession for
-            timing as you put into your guest list.
+          <p className="mt-4 text-sm leading-relaxed text-neutral-400 sm:text-base">
+            Barat convoys, mehndi shuttles, VIP groom entries &amp; full
+            wedding transport — available in Gujrat, Lahore, Islamabad &amp;
+            Karachi.
           </p>
         </motion.div>
 

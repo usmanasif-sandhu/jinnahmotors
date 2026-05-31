@@ -64,12 +64,12 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-us"
-      className="relative scroll-mt-28 bg-neutral-50 px-6 py-20 md:scroll-mt-32 md:py-28"
+      className="relative scroll-mt-28 bg-neutral-50 section-pad md:scroll-mt-32"
       aria-labelledby="why-heading"
     >
       <div className="pointer-events-none absolute inset-x-0 top-1/4 -z-10 h-[420px] bg-[radial-gradient(circle,_rgba(15,23,42,0.06),transparent_62%)]" />
 
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ export default function WhyChooseUs() {
           </p>
           <h2
             id="why-heading"
-            className="mt-3 text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl"
+            className="font-display mt-4 text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl"
           >
             Seamless choreography from first inquiry to driveway departure.
           </h2>

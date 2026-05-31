@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
-import { SITE } from '../constants/site'
+import { SITE, whatsappHref } from '../constants/site'
 
 const links = [
   { href: '#home', label: 'Home' },
-  { href: '#cars', label: 'Cars' },
+  { href: '#fleet-showcase', label: 'Luxury Fleet' },
+  { href: '#cars', label: 'All Cars' },
   { href: '#packages', label: 'Packages' },
   { href: '#about', label: 'About' },
   { href: '#contact', label: 'Contact' },
@@ -30,56 +31,57 @@ export default function Navbar() {
   }, [open])
 
   const baseLink =
-    'relative text-sm font-medium text-neutral-800 transition-colors hover:text-neutral-950 after:pointer-events-none after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:origin-center after:scale-x-0 after:bg-gradient-to-r after:from-gold-dark after:to-gold after:transition-transform after:duration-300 hover:after:scale-x-100'
+    'relative text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-950 after:pointer-events-none after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:origin-center after:scale-x-0 after:bg-gradient-to-r after:from-gold-dark after:to-gold after:transition-transform after:duration-300 hover:after:scale-x-100'
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 px-4 sm:px-6 lg:px-10 pt-4">
+    <header className="fixed inset-x-0 top-0 z-40 px-4 pt-4 sm:px-6 lg:px-8">
       <motion.nav
         initial={{ y: -12, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        className={`mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-2xl border px-5 py-3 shadow-sm transition-all duration-500 ${
+        className={`mx-auto flex max-w-7xl items-center justify-between gap-4 rounded-2xl border px-4 py-3 shadow-sm transition-all duration-500 sm:px-5 ${
           scrolled
-            ? 'border-neutral-200/80 bg-white/70 shadow-[0_18px_60px_-24px_rgba(15,23,42,0.35)] backdrop-blur-xl'
-            : 'border-white/55 bg-white/45 backdrop-blur-md'
+            ? 'border-neutral-200/80 bg-white/85 shadow-[0_18px_60px_-24px_rgba(0,0,0,0.2)] backdrop-blur-xl'
+            : 'border-white/40 bg-white/60 backdrop-blur-md'
         }`}
-        aria-label="Primary"
+        aria-label="Primary navigation"
       >
         <a
           href="#home"
           className="group inline-flex min-w-0 shrink items-center gap-2.5"
           onClick={() => setOpen(false)}
         >
-          <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-800 text-[11px] font-semibold tracking-[0.2em] text-gold-light shadow-inner shadow-black/35">
+          <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-neutral-950 text-[11px] font-bold tracking-[0.2em] text-gold-light ring-1 ring-gold/20">
             JM
-            <span className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-white/25" />
           </span>
-          <span className="flex min-w-0 max-w-[200px] flex-col leading-tight sm:max-w-xs">
-            <span className="text-[13px] font-semibold leading-snug text-neutral-950 sm:text-[14px]">
-              <span className="line-clamp-2 sm:line-clamp-none">{SITE.name}</span>
+          <span className="flex min-w-0 flex-col leading-tight">
+            <span className="truncate text-[13px] font-semibold text-neutral-950 sm:text-sm">
+              {SITE.shortName}
             </span>
-            <span className="text-[10px] font-medium uppercase tracking-[0.26em] text-neutral-500">
-              Gujrat · Luxury transport
+            <span className="hidden text-[10px] font-medium uppercase tracking-[0.22em] text-neutral-500 sm:block">
+              Luxury · Pakistan
             </span>
           </span>
         </a>
 
-        <div className="hidden items-center gap-8 lg:flex">
+        <div className="hidden items-center gap-7 xl:flex">
           {links.map((link) => (
-            <motion.a key={link.href} href={link.href} className={baseLink}>
+            <a key={link.href} href={link.href} className={baseLink}>
               {link.label}
-            </motion.a>
+            </a>
           ))}
         </div>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-3 lg:flex">
           <motion.a
-            href="#cars"
+            href={whatsappHref('Hi Jinnah Motors, I would like to book a car.')}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="rounded-full bg-neutral-950 px-[18px] py-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold-light shadow-[0_14px_40px_-16px_rgba(15,23,42,0.75)] ring-1 ring-white/25 transition hover:bg-neutral-900"
+            className="rounded-full bg-neutral-950 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-gold-light shadow-lg ring-1 ring-gold/20 transition hover:bg-neutral-900"
           >
-            Reserve Fleet
+            Book Now
           </motion.a>
         </div>
 
@@ -95,7 +97,6 @@ export default function Navbar() {
           {open ? <HiX className="text-2xl" /> : <HiMenuAlt3 className="text-2xl" />}
         </motion.button>
 
-        {/* Mobile */}
         <AnimatePresence>
           {open ? (
             <motion.div
@@ -103,7 +104,7 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-30 bg-neutral-950/55 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-30 bg-neutral-950/60 backdrop-blur-sm lg:hidden"
               onClick={() => setOpen(false)}
             >
               <motion.div
@@ -111,14 +112,14 @@ export default function Navbar() {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: '-4%', opacity: 0 }}
                 transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-                className="glass absolute right-6 top-24 flex w-[min(92vw,400px)] flex-col gap-1 rounded-[22px] p-6 text-left shadow-2xl"
+                className="glass absolute right-4 top-24 flex w-[min(92vw,400px)] flex-col gap-1 rounded-[22px] p-6 text-left shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-neutral-600">
-                  {SITE.shortName}
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-neutral-500">
+                  {SITE.name}
                 </p>
-                <p className="mb-2 text-lg font-semibold text-neutral-900">
-                  Glide through Gujrat in comfort.
+                <p className="mb-3 font-display text-lg font-semibold text-neutral-900">
+                  Luxury transport across Pakistan
                 </p>
                 {links.map((link, idx) => (
                   <motion.a
@@ -126,24 +127,22 @@ export default function Navbar() {
                     href={link.href}
                     initial={{ opacity: 0, y: 6 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                      duration: 0.24,
-                      delay: 0.05 * idx,
-                      ease: [0.16, 1, 0.3, 1],
-                    }}
-                    className="rounded-xl px-4 py-3 text-sm font-medium text-neutral-900 transition hover:bg-white/95"
+                    transition={{ duration: 0.24, delay: 0.04 * idx }}
+                    className="rounded-xl px-4 py-3 text-sm font-medium text-neutral-900 transition hover:bg-neutral-50"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
                   </motion.a>
                 ))}
                 <motion.a
-                  href="#cars"
+                  href={whatsappHref()}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileTap={{ scale: 0.98 }}
-                  className="mt-3 rounded-full bg-neutral-950 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-gold-light shadow-lg"
+                  className="mt-3 rounded-full bg-neutral-950 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.18em] text-gold-light"
                   onClick={() => setOpen(false)}
                 >
-                  View Premium Cars
+                  Book Now — WhatsApp
                 </motion.a>
               </motion.div>
             </motion.div>

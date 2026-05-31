@@ -22,10 +22,10 @@ export default function Testimonials() {
 
   return (
     <section
-      className="relative scroll-mt-28 bg-white px-6 py-20 md:scroll-mt-32 md:py-28"
+      className="relative scroll-mt-28 bg-white section-pad md:scroll-mt-32"
       aria-labelledby="reviews-heading"
     >
-      <div className="mx-auto flex max-w-6xl flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+      <div className="mx-auto flex max-w-7xl flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
         <motion.div
           initial={{ opacity: 0, y: 26 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ export default function Testimonials() {
           </p>
           <h2
             id="reviews-heading"
-            className="mt-3 text-balance text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl"
+            className="font-display mt-4 text-balance text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl"
           >
             Proof that the little details—the quiet cabin hum, the crease-free
             seat leather—matter.
