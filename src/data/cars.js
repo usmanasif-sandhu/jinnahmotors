@@ -45,7 +45,7 @@ export const CARS = [
   },
   {
     id: 'bentley-flying-spur',
-    name: 'Bentley Flying Spur',
+    name: 'Bentley',
     category: 'ultra-luxury',
     pricePerDay: 220000,
     image: DEFAULT_CAR_IMAGE,
