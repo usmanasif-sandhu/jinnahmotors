@@ -1,7 +1,9 @@
 /** Local fleet image served from /public */
 export const DEFAULT_CAR_IMAGE = '/car%20pic.jpeg'
-export const aboutImage = '/About%20Image.jpeg'
+
 export const heroImage = DEFAULT_CAR_IMAGE
+
+export const aboutImage = '/About%20Image.jpeg'
 
 // Specific car images (matching files in /public)
 export const MERCEDES_G_BRABUS_IMAGE = '/Mercedes%20G%20Wagon%20Brabus.jpeg'
@@ -33,6 +35,9 @@ export const HONDA_CIVIC_X_IMAGE = '/Honda%20Civic%20X.jpeg'
 export const HONDA_BRV_IMAGE = '/Honda%20BRV.jpeg'
 export const SUZUKI_ALTO_IMAGE = '/Suzuki%20Alto.jpeg'
 export const SUZUKI_WAGONR_IMAGE = '/Suzuki%20WagonR.jpeg'
+export const LEXUS_LX570_IMAGE = '/Lexus%20LX570.jpeg'
+export const RANGE_ROVER_AUTOBIOGRAPHY_IMAGE = '/Range%20Rover%20Autobiograpghy.jpeg'
+export const RANGE_ROVER_SVR_IMAGE = '/Range%20Rover%20SVR.jpeg'
 
 // Package images (matching files in /public)
 export const BARAT_PACKAGE_IMAGE = '/Barat%20Package.jpeg'

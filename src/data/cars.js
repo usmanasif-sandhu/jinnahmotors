@@ -12,6 +12,8 @@ import {
   MERCEDES_MAYBACH_IMAGE,
   PORSCHE_TAYCAN_IMAGE,
   RANGE_ROVER_VOGUE_IMAGE,
+  RANGE_ROVER_AUTOBIOGRAPHY_IMAGE,
+  RANGE_ROVER_SVR_IMAGE,
   TOYOTA_FORTUNER_IMAGE,
   TOYOTA_TUNDRA_IMAGE,
   TOYOTA_LAND_CRUISER_ZX_IMAGE,
@@ -29,6 +31,7 @@ import {
   HONDA_BRV_IMAGE,
   SUZUKI_ALTO_IMAGE,
   SUZUKI_WAGONR_IMAGE,
+  LEXUS_LX570_IMAGE,
 } from '../constants/carImages'
 
 /** @typedef {'ultra-luxury' | 'suv' | 'sedan' | 'economy' | 'limousine' | 'pickup' | 'van'} CarCategory */
@@ -48,12 +51,12 @@ import {
 /** @type {Car[]} */
 export const CARS = [
   {
-    id: 'mercedes-g-brabus',
-    name: 'Mercedes G Wagon Brabus',
+    id: 'lamborghini-urus',
+    name: 'Lamborghini Urus',
     category: 'ultra-luxury',
-    pricePerDay: 120000,
-    image: MERCEDES_G_BRABUS_IMAGE,
-    alt: 'Mercedes-Benz G-Class W463 luxury SUV — Brabus style rental Pakistan',
+    pricePerDay: 1000000,
+    image: LAMBORGHINI_URUS_IMAGE,
+    alt: 'Lamborghini Urus performance luxury SUV rental Pakistan',
     featured: true,
   },
   {
@@ -84,14 +87,17 @@ export const CARS = [
     featured: true,
   },
   {
-    id: 'lamborghini-urus',
-    name: 'Lamborghini Urus',
+    id: 'mercedes-g-brabus',
+    name: 'Mercedes G Wagon Brabus',
     category: 'ultra-luxury',
-    pricePerDay: 1000000,
-    image: LAMBORGHINI_URUS_IMAGE,
-    alt: 'Lamborghini Urus performance luxury SUV rental Pakistan',
+    pricePerDay: 120000,
+    image: MERCEDES_G_BRABUS_IMAGE,
+    alt: 'Mercedes-Benz G-Class W463 luxury SUV — Brabus style rental Pakistan',
     featured: true,
   },
+  
+  
+  
   {
     id: 'lexus-limousine',
     name: 'Lexus Limousine',
@@ -137,6 +143,24 @@ export const CARS = [
     featured: true,
   },
   {
+    id: 'range-rover-autobiography',
+    name: 'Range Rover Autobiography',
+    category: 'ultra-luxury',
+    pricePerDay: 100000,
+    image: RANGE_ROVER_AUTOBIOGRAPHY_IMAGE,
+    alt: 'Range Rover Autobiography luxury SUV rental Pakistan',
+    featured: true,
+  },
+  {
+    id: 'range-rover-svr',
+    name: 'Range Rover SVR',
+    category: 'ultra-luxury',
+    pricePerDay: 140000,
+    image: RANGE_ROVER_SVR_IMAGE,
+    alt: 'Range Rover Sport SVR performance SUV rental Pakistan',
+    featured: true,
+  },
+  {
     id: 'mercedes-maybach',
     name: 'Mercedes Maybach S Class',
     category: 'ultra-luxury',
@@ -154,6 +178,14 @@ export const CARS = [
     alt: 'Mercedes-AMG C63 S W205 performance sedan rental Pakistan',
   },
   {
+    id: 'Lexus-570',
+    name: 'Lexus LX570',
+    category: 'suv',
+    pricePerDay: 120000,
+    image: LEXUS_LX570_IMAGE,
+    alt: 'Lexus LX570 full-size luxury SUV rental Pakistan',
+  },
+  {
     id: 'land-cruiser-zx',
     name: 'Toyota Land Cruiser ZX V8',
     category: 'suv',
@@ -169,14 +201,7 @@ export const CARS = [
     image: TOYOTA_LC300_IMAGE,
     alt: '2022 Toyota Land Cruiser 300 GR Sport SUV rental Pakistan',
   },
-  {
-    id: 'Lexus-570',
-    name: 'Lexus LX570',
-    category: 'suv',
-    pricePerDay: 30000,
-    image: TOYOTA_LC300_IMAGE,
-    alt: '2022 Toyota Land Cruiser 300 GR Sport SUV rental Pakistan',
-  },
+ 
   {
     id: 'audi-a6',
     name: 'Audi A6',
