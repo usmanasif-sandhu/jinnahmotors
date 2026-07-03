@@ -1,8 +1,7 @@
 /** Local fleet image served from /public */
 export const DEFAULT_CAR_IMAGE = '/car%20pic.jpeg'
-
+export const aboutImage = '/About%20Image.jpeg'
 export const heroImage = DEFAULT_CAR_IMAGE
-export const aboutImage = DEFAULT_CAR_IMAGE
 
 // Specific car images (matching files in /public)
 export const MERCEDES_G_BRABUS_IMAGE = '/Mercedes%20G%20Wagon%20Brabus.jpeg'
@@ -28,8 +27,15 @@ export const TOYOTA_GRANDE_IMAGE = '/Toyota%20Grande.jpeg'
 export const TOYOTA_ALTIS_GLI_XLI_IMAGE = '/Toyota%20Altis%20GLI%20XLI.jpeg'
 export const TOYOTA_YARIS_IMAGE = '/Toyota%20Yaris.jpeg'
 export const AUDI_A6_IMAGE = '/Audi%20A6.jpeg'
+export const AUDI_A5_IMAGE = '/Audi%20A5.jpeg'
 export const HONDA_CIVIC_11_IMAGE = '/Honda%20Civic%2011th%20Gen.jpeg'
 export const HONDA_CIVIC_X_IMAGE = '/Honda%20Civic%20X.jpeg'
 export const HONDA_BRV_IMAGE = '/Honda%20BRV.jpeg'
 export const SUZUKI_ALTO_IMAGE = '/Suzuki%20Alto.jpeg'
 export const SUZUKI_WAGONR_IMAGE = '/Suzuki%20WagonR.jpeg'
+
+// Package images (matching files in /public)
+export const BARAT_PACKAGE_IMAGE = '/Barat%20Package.jpeg'
+export const MEHNDI_PACKAGE_IMAGE = '/Mehndi%20Package.jpeg'
+export const VIP_GROOM_ENTRY_IMAGE = '/VIP%20Groom%20Entry.jpeg'
+export const FULL_WEDDING_TRANSPORT_IMAGE = '/Full%20Wedding%20Transport.jpeg'

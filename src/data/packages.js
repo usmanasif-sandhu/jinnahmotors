@@ -1,12 +1,17 @@
-import { DEFAULT_CAR_IMAGE } from '../constants/carImages'
+import {
+  BARAT_PACKAGE_IMAGE,
+  MEHNDI_PACKAGE_IMAGE,
+  VIP_GROOM_ENTRY_IMAGE,
+  FULL_WEDDING_TRANSPORT_IMAGE,
+} from '../constants/carImages'
 
 export const PACKAGES = [
   {
     id: 'barat',
     title: 'Barat Package',
     subtitle: 'Royal convoy arrival & departure',
-    fromPrice: 45000,
-    image: DEFAULT_CAR_IMAGE,
+    fromPrice: 200000,
+    image: BARAT_PACKAGE_IMAGE,
     features: [
       'Decorated flagship sedan / SUV convoy options',
       'Uniform chauffeur with route planning',
@@ -20,8 +25,8 @@ export const PACKAGES = [
     id: 'mehndi',
     title: 'Mehndi Package',
     subtitle: 'Vibrant arrivals for festivities',
-    fromPrice: 28000,
-    image: DEFAULT_CAR_IMAGE,
+    fromPrice: 100000,
+    image: MEHNDI_PACKAGE_IMAGE,
     features: [
       'Priority booking for Mehndi evenings',
       'Family-friendly fleet with extra luggage space',
@@ -35,8 +40,8 @@ export const PACKAGES = [
     id: 'vip-groom',
     title: 'VIP Groom Entry',
     subtitle: 'Cinematic entrance choreography',
-    fromPrice: 65000,
-    image: DEFAULT_CAR_IMAGE,
+    fromPrice: 300000,
+    image: VIP_GROOM_ENTRY_IMAGE,
     features: [
       'Signature luxury SUV spotlight entry',
       'Red-carpet ready cabin detailing',
@@ -50,8 +55,8 @@ export const PACKAGES = [
     id: 'full-wedding',
     title: 'Full Wedding Transport',
     subtitle: 'End-to-end guest & family logistics',
-    fromPrice: 125000,
-    image: DEFAULT_CAR_IMAGE,
+    fromPrice: 500000,
+    image: FULL_WEDDING_TRANSPORT_IMAGE,
     features: [
       'Multi-day routing across Mehndi / Barat / Walima',
       'Mixed fleet sedan + SUV combos',

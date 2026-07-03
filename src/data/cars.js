@@ -23,6 +23,7 @@ import {
   TOYOTA_ALTIS_GLI_XLI_IMAGE,
   TOYOTA_YARIS_IMAGE,
   AUDI_A6_IMAGE,
+  AUDI_A5_IMAGE,
   HONDA_CIVIC_11_IMAGE,
   HONDA_CIVIC_X_IMAGE,
   HONDA_BRV_IMAGE,
@@ -169,6 +170,14 @@ export const CARS = [
     alt: '2022 Toyota Land Cruiser 300 GR Sport SUV rental Pakistan',
   },
   {
+    id: 'Lexus-570',
+    name: 'Lexus LX570',
+    category: 'suv',
+    pricePerDay: 30000,
+    image: TOYOTA_LC300_IMAGE,
+    alt: '2022 Toyota Land Cruiser 300 GR Sport SUV rental Pakistan',
+  },
+  {
     id: 'audi-a6',
     name: 'Audi A6',
     category: 'sedan',
@@ -181,7 +190,7 @@ export const CARS = [
     name: 'Audi A5',
     category: 'sedan',
     pricePerDay: 30000,
-    image: DEFAULT_CAR_IMAGE,
+    image: AUDI_A5_IMAGE,
     alt: 'Audi A5 Sportback F5 premium sedan rental Pakistan',
   },
   {
