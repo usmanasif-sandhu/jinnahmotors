@@ -1,4 +1,13 @@
-import { DEFAULT_CAR_IMAGE } from '../constants/carImages'
+import {
+  DEFAULT_CAR_IMAGE,
+  BENTLEY_IMAGE,
+  GMC_LIMOUSINE_IMAGE,
+  MERCEDES_AMG_C_IMAGE,
+  MERCEDES_MAYBACH_IMAGE,
+  PORSCHE_TAYCAN_IMAGE,
+  RANGE_ROVER_VOGUE_IMAGE,
+  TOYOTA_FORTUNER_IMAGE,
+} from '../constants/carImages'
 
 /** @typedef {'ultra-luxury' | 'suv' | 'sedan' | 'economy' | 'limousine' | 'pickup' | 'van'} CarCategory */
 
@@ -39,7 +48,7 @@ export const CARS = [
     name: 'Porsche Taycan',
     category: 'ultra-luxury',
     pricePerDay: 230000,
-    image: DEFAULT_CAR_IMAGE,
+    image: PORSCHE_TAYCAN_IMAGE,
     alt: 'Porsche Taycan 4S electric luxury sedan rental Pakistan',
     featured: true,
   },
@@ -48,7 +57,7 @@ export const CARS = [
     name: 'Bentley',
     category: 'ultra-luxury',
     pricePerDay: 220000,
-    image: DEFAULT_CAR_IMAGE,
+    image: BENTLEY_IMAGE,
     alt: '2020 Bentley Flying Spur First Edition luxury sedan rental Pakistan',
     featured: true,
   },
@@ -66,7 +75,7 @@ export const CARS = [
     name: 'GMC Limousine',
     category: 'limousine',
     pricePerDay: 180000,
-    image: DEFAULT_CAR_IMAGE,
+    image: GMC_LIMOUSINE_IMAGE,
     alt: '2015 GMC Yukon Denali luxury SUV limousine rental Pakistan',
     featured: true,
   },
@@ -92,7 +101,7 @@ export const CARS = [
     name: 'Range Rover Vogue',
     category: 'ultra-luxury',
     pricePerDay: 100000,
-    image: DEFAULT_CAR_IMAGE,
+    image: RANGE_ROVER_VOGUE_IMAGE,
     alt: '2018 Range Rover Vogue SDV6 Autobiography luxury SUV rental Pakistan',
     featured: true,
   },
@@ -101,7 +110,7 @@ export const CARS = [
     name: 'Mercedes Maybach S Class',
     category: 'ultra-luxury',
     pricePerDay: 100000,
-    image: DEFAULT_CAR_IMAGE,
+    image: MERCEDES_MAYBACH_IMAGE,
     alt: 'Mercedes-Maybach S680 4MATIC ultra luxury sedan rental Pakistan',
     featured: true,
   },
@@ -110,7 +119,7 @@ export const CARS = [
     name: 'Mercedes AMG C Class',
     category: 'ultra-luxury',
     pricePerDay: 45000,
-    image: DEFAULT_CAR_IMAGE,
+    image: MERCEDES_AMG_C_IMAGE,
     alt: 'Mercedes-AMG C63 S W205 performance sedan rental Pakistan',
   },
   {
@@ -167,7 +176,7 @@ export const CARS = [
     name: 'Toyota Fortuner',
     category: 'suv',
     pricePerDay: 16000,
-    image: DEFAULT_CAR_IMAGE,
+    image: TOYOTA_FORTUNER_IMAGE,
     alt: '2017-2018 Toyota Fortuner AN160 SUV rental Pakistan',
   },
   {
