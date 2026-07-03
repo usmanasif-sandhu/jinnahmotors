@@ -20,6 +20,7 @@ import {
   TOYOTA_REVO_IMAGE,
   TOYOTA_HIACE_HIGH_ROOF_IMAGE,
   TOYOTA_GRANDE_IMAGE,
+  TOYOTA_ALTIS_GLI_XLI_IMAGE,
   TOYOTA_YARIS_IMAGE,
   AUDI_A6_IMAGE,
   HONDA_CIVIC_11_IMAGE,
@@ -85,7 +86,7 @@ export const CARS = [
     id: 'lamborghini-urus',
     name: 'Lamborghini Urus',
     category: 'ultra-luxury',
-    pricePerDay: 260000,
+    pricePerDay: 1000000,
     image: LAMBORGHINI_URUS_IMAGE,
     alt: 'Lamborghini Urus performance luxury SUV rental Pakistan',
     featured: true,
@@ -262,7 +263,7 @@ export const CARS = [
     name: 'Toyota Altis / GLI / XLI',
     category: 'sedan',
     pricePerDay: 5000,
-    image: DEFAULT_CAR_IMAGE,
+    image: TOYOTA_ALTIS_GLI_XLI_IMAGE,
     alt: 'Toyota Corolla Altis GLI XLI sedan rental Pakistan',
   },
   {
@@ -289,14 +290,7 @@ export const CARS = [
     image: SUZUKI_ALTO_IMAGE,
     alt: 'Suzuki Alto HA36 660cc hatchback rental Pakistan',
   },
-  {
-    id: 'suzuki-cultus',
-    name: 'Suzuki Cultus',
-    category: 'economy',
-    pricePerDay: 3500,
-    image: DEFAULT_CAR_IMAGE,
-    alt: 'Suzuki Cultus Swift hatchback rental Pakistan',
-  },
+  
 ]
 
 export const CATEGORIES = [
