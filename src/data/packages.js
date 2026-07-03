@@ -1,11 +1,12 @@
+import { DEFAULT_CAR_IMAGE } from '../constants/carImages'
+
 export const PACKAGES = [
   {
     id: 'barat',
     title: 'Barat Package',
     subtitle: 'Royal convoy arrival & departure',
     fromPrice: 45000,
-    image:
-      'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=960&q=80',
+    image: DEFAULT_CAR_IMAGE,
     features: [
       'Decorated flagship sedan / SUV convoy options',
       'Uniform chauffeur with route planning',
@@ -20,8 +21,7 @@ export const PACKAGES = [
     title: 'Mehndi Package',
     subtitle: 'Vibrant arrivals for festivities',
     fromPrice: 28000,
-    image:
-      'https://images.unsplash.com/photo-1529636799528-213b66e862b9?auto=format&fit=crop&w=960&q=80',
+    image: DEFAULT_CAR_IMAGE,
     features: [
       'Priority booking for Mehndi evenings',
       'Family-friendly fleet with extra luggage space',
@@ -36,8 +36,7 @@ export const PACKAGES = [
     title: 'VIP Groom Entry',
     subtitle: 'Cinematic entrance choreography',
     fromPrice: 65000,
-    image:
-      'https://images.unsplash.com/photo-1530103041689-ccddfd4dff33?auto=format&fit=crop&w=960&q=80',
+    image: DEFAULT_CAR_IMAGE,
     features: [
       'Signature luxury SUV spotlight entry',
       'Red-carpet ready cabin detailing',
@@ -52,8 +51,7 @@ export const PACKAGES = [
     title: 'Full Wedding Transport',
     subtitle: 'End-to-end guest & family logistics',
     fromPrice: 125000,
-    image:
-      'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=960&q=80',
+    image: DEFAULT_CAR_IMAGE,
     features: [
       'Multi-day routing across Mehndi / Barat / Walima',
       'Mixed fleet sedan + SUV combos',

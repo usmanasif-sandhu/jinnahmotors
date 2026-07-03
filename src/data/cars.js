@@ -1,4 +1,4 @@
-import { CAR_IMAGES } from '../constants/carImages'
+import { DEFAULT_CAR_IMAGE } from '../constants/carImages'
 
 /** @typedef {'ultra-luxury' | 'suv' | 'sedan' | 'economy' | 'limousine' | 'pickup' | 'van'} CarCategory */
 
@@ -21,7 +21,7 @@ export const CARS = [
     name: 'Mercedes G Wagon Brabus',
     category: 'ultra-luxury',
     pricePerDay: 120000,
-    image: CAR_IMAGES.mercedesGBrabus,
+    image: DEFAULT_CAR_IMAGE,
     alt: 'Mercedes-Benz G-Class W463 luxury SUV — Brabus style rental Pakistan',
     featured: true,
   },
@@ -30,7 +30,7 @@ export const CARS = [
     name: 'BMW i8',
     category: 'ultra-luxury',
     pricePerDay: 250000,
-    image: CAR_IMAGES.bmwI8,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2015 BMW i8 I12 coupe hybrid sports car rental Pakistan',
     featured: true,
   },
@@ -39,7 +39,7 @@ export const CARS = [
     name: 'Porsche Taycan',
     category: 'ultra-luxury',
     pricePerDay: 230000,
-    image: CAR_IMAGES.porscheTaycan,
+    image: DEFAULT_CAR_IMAGE,
     alt: 'Porsche Taycan 4S electric luxury sedan rental Pakistan',
     featured: true,
   },
@@ -48,7 +48,7 @@ export const CARS = [
     name: 'Bentley Flying Spur',
     category: 'ultra-luxury',
     pricePerDay: 220000,
-    image: CAR_IMAGES.bentleyFlyingSpur,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2020 Bentley Flying Spur First Edition luxury sedan rental Pakistan',
     featured: true,
   },
@@ -57,7 +57,7 @@ export const CARS = [
     name: 'Lexus Limousine',
     category: 'limousine',
     pricePerDay: 160000,
-    image: CAR_IMAGES.lexusLimousine,
+    image: DEFAULT_CAR_IMAGE,
     alt: 'Stretch limousine wedding and VIP transport rental Pakistan',
     featured: true,
   },
@@ -66,7 +66,7 @@ export const CARS = [
     name: 'GMC Limousine',
     category: 'limousine',
     pricePerDay: 180000,
-    image: CAR_IMAGES.gmcLimousine,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2015 GMC Yukon Denali luxury SUV limousine rental Pakistan',
     featured: true,
   },
@@ -75,7 +75,7 @@ export const CARS = [
     name: 'Tundra Limousine',
     category: 'limousine',
     pricePerDay: 180000,
-    image: CAR_IMAGES.tundraLimousine,
+    image: DEFAULT_CAR_IMAGE,
     alt: 'Toyota Tundra based stretch limousine rental Pakistan',
   },
   {
@@ -83,7 +83,7 @@ export const CARS = [
     name: 'BMW 7 Series',
     category: 'ultra-luxury',
     pricePerDay: 120000,
-    image: CAR_IMAGES.bmw7Series,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2022 BMW 740i xDrive G11 executive sedan rental Pakistan',
     featured: true,
   },
@@ -92,7 +92,7 @@ export const CARS = [
     name: 'Range Rover Vogue',
     category: 'ultra-luxury',
     pricePerDay: 100000,
-    image: CAR_IMAGES.rangeRoverVogue,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2018 Range Rover Vogue SDV6 Autobiography luxury SUV rental Pakistan',
     featured: true,
   },
@@ -101,7 +101,7 @@ export const CARS = [
     name: 'Mercedes Maybach S Class',
     category: 'ultra-luxury',
     pricePerDay: 100000,
-    image: CAR_IMAGES.mercedesMaybach,
+    image: DEFAULT_CAR_IMAGE,
     alt: 'Mercedes-Maybach S680 4MATIC ultra luxury sedan rental Pakistan',
     featured: true,
   },
@@ -110,7 +110,7 @@ export const CARS = [
     name: 'Mercedes AMG C Class',
     category: 'ultra-luxury',
     pricePerDay: 45000,
-    image: CAR_IMAGES.mercedesAmgC,
+    image: DEFAULT_CAR_IMAGE,
     alt: 'Mercedes-AMG C63 S W205 performance sedan rental Pakistan',
   },
   {
@@ -118,7 +118,7 @@ export const CARS = [
     name: 'Toyota Land Cruiser ZX V8',
     category: 'suv',
     pricePerDay: 30000,
-    image: CAR_IMAGES.landCruiserZx,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2022 Toyota Land Cruiser 300 ZX GRJ300 V8 SUV rental Pakistan',
   },
   {
@@ -126,7 +126,7 @@ export const CARS = [
     name: 'Toyota LC300',
     category: 'suv',
     pricePerDay: 30000,
-    image: CAR_IMAGES.landCruiser300,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2022 Toyota Land Cruiser 300 GR Sport SUV rental Pakistan',
   },
   {
@@ -134,7 +134,7 @@ export const CARS = [
     name: 'Audi A6',
     category: 'sedan',
     pricePerDay: 40000,
-    image: CAR_IMAGES.audiA6,
+    image: DEFAULT_CAR_IMAGE,
     alt: 'Audi A6 C8 50 TDI quattro executive sedan rental Pakistan',
   },
   {
@@ -142,7 +142,7 @@ export const CARS = [
     name: 'Audi A5',
     category: 'sedan',
     pricePerDay: 30000,
-    image: CAR_IMAGES.audiA5,
+    image: DEFAULT_CAR_IMAGE,
     alt: 'Audi A5 Sportback F5 premium sedan rental Pakistan',
   },
   {
@@ -150,7 +150,7 @@ export const CARS = [
     name: 'Toyota Tundra',
     category: 'pickup',
     pricePerDay: 20000,
-    image: CAR_IMAGES.toyotaTundra,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2022 Toyota Tundra Limited pickup truck rental Pakistan',
   },
   {
@@ -158,7 +158,7 @@ export const CARS = [
     name: 'Toyota Prado TX',
     category: 'suv',
     pricePerDay: 17000,
-    image: CAR_IMAGES.toyotaPradoTx,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2015 Toyota Land Cruiser Prado TRJ150W TX wagon rental Pakistan',
     featured: true,
   },
@@ -167,7 +167,7 @@ export const CARS = [
     name: 'Toyota Fortuner',
     category: 'suv',
     pricePerDay: 16000,
-    image: CAR_IMAGES.toyotaFortuner,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2017-2018 Toyota Fortuner AN160 SUV rental Pakistan',
   },
   {
@@ -175,7 +175,7 @@ export const CARS = [
     name: 'Toyota Revo',
     category: 'pickup',
     pricePerDay: 15000,
-    image: CAR_IMAGES.toyotaRevo,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2018 Toyota Hilux Revo pickup truck rental Pakistan',
   },
   {
@@ -184,7 +184,7 @@ export const CARS = [
     category: 'van',
     pricePerDay: 13000,
     note: 'Without fuel',
-    image: CAR_IMAGES.toyotaHiace,
+    image: DEFAULT_CAR_IMAGE,
     alt: 'Toyota Hiace Super Grandia high roof van rental Pakistan',
   },
   {
@@ -192,7 +192,7 @@ export const CARS = [
     name: 'Honda Civic 11th Gen',
     category: 'sedan',
     pricePerDay: 12000,
-    image: CAR_IMAGES.hondaCivic11,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2022 Honda Civic 11th generation sedan rental Pakistan',
   },
   {
@@ -200,7 +200,7 @@ export const CARS = [
     name: 'Honda Civic X',
     category: 'sedan',
     pricePerDay: 6000,
-    image: CAR_IMAGES.hondaCivicX,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2016 Honda Civic X tenth generation sedan rental Pakistan',
   },
   {
@@ -208,7 +208,7 @@ export const CARS = [
     name: 'Toyota Grande',
     category: 'sedan',
     pricePerDay: 6000,
-    image: CAR_IMAGES.toyotaGrande,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2019 Toyota Corolla Altis Grande sedan rental Pakistan',
   },
   {
@@ -216,7 +216,7 @@ export const CARS = [
     name: 'Toyota Altis / GLI / XLI',
     category: 'sedan',
     pricePerDay: 5000,
-    image: CAR_IMAGES.toyotaAltis,
+    image: DEFAULT_CAR_IMAGE,
     alt: 'Toyota Corolla Altis GLI XLI sedan rental Pakistan',
   },
   {
@@ -224,7 +224,7 @@ export const CARS = [
     name: 'Toyota Yaris',
     category: 'economy',
     pricePerDay: 4500,
-    image: CAR_IMAGES.toyotaYaris,
+    image: DEFAULT_CAR_IMAGE,
     alt: '2020 Toyota Yaris sedan rental Pakistan',
   },
   {
@@ -232,7 +232,7 @@ export const CARS = [
     name: 'Suzuki WagonR',
     category: 'economy',
     pricePerDay: 3500,
-    image: CAR_IMAGES.suzukiWagonR,
+    image: DEFAULT_CAR_IMAGE,
     alt: 'Maruti Suzuki WagonR 2019 hatchback rental Pakistan',
   },
   {
@@ -240,7 +240,7 @@ export const CARS = [
     name: 'Suzuki Alto',
     category: 'economy',
     pricePerDay: 3500,
-    image: CAR_IMAGES.suzukiAlto,
+    image: DEFAULT_CAR_IMAGE,
     alt: 'Suzuki Alto HA36 660cc hatchback rental Pakistan',
   },
   {
@@ -248,7 +248,7 @@ export const CARS = [
     name: 'Suzuki Cultus',
     category: 'economy',
     pricePerDay: 3500,
-    image: CAR_IMAGES.suzukiCultus,
+    image: DEFAULT_CAR_IMAGE,
     alt: 'Suzuki Cultus Swift hatchback rental Pakistan',
   },
 ]

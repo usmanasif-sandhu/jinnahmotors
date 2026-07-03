@@ -35,8 +35,7 @@ export const SEO = {
     'Bentley rental Pakistan',
     'Jinnah Motors',
   ].join(', '),
-  ogImage:
-    'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1200&q=80',
+  ogImage: 'https://jinnahmotors.pk/car%20pic.jpeg',
 }
 
 export const whatsappHref = (
