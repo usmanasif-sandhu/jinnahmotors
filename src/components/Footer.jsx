@@ -117,7 +117,7 @@ export default function Footer() {
           © 2026 {SITE.name} — All Rights Reserved
         </p>
         <p className="mt-2 text-center text-[11px] tracking-[0.18em] text-neutral-600">
-          Powered By DevTorque
+          Developed By Usman Asif Sandhu (0321-1161139) | DevTorque
         </p>
       </motion.div>
     </footer>

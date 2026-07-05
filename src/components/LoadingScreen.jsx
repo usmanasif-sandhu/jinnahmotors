@@ -17,12 +17,15 @@ export default function LoadingScreen({ visible }) {
               initial={{ rotate: -4, opacity: 0 }}
               animate={{ rotate: [0, 2.5, 0], opacity: 1 }}
               transition={{ duration: 0.95, repeat: Infinity, repeatType: 'mirror' }}
-              className="relative flex h-24 w-24 items-center justify-center rounded-[28px] bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-800 text-xl font-semibold tracking-[0.24em] text-gold-light shadow-[0_32px_80px_-42px_rgba(15,23,42,0.85)] ring-4 ring-neutral-950/85"
+              className="relative flex h-24 w-24 items-center justify-center"
               aria-busy="true"
               aria-label="Loading Jinnah Motors site"
             >
-              JM
-              <span className="pointer-events-none absolute inset-[-1px] rounded-[29px] border border-white/18" />
+              <img
+                src="/logo.png"
+                alt={`${SITE.name} logo`}
+                className="h-full w-full object-contain drop-shadow-[0_18px_40px_rgba(15,23,42,0.35)]"
+              />
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 6 }}

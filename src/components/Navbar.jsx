@@ -51,8 +51,12 @@ export default function Navbar() {
           className="group inline-flex min-w-0 shrink items-center gap-2.5"
           onClick={() => setOpen(false)}
         >
-          <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-neutral-950 text-[11px] font-bold tracking-[0.2em] text-gold-light ring-1 ring-gold/20">
-            JM
+          <span className="relative flex h-9 w-9 shrink-0 items-center justify-center">
+            <img
+              src="/logo.png"
+              alt={`${SITE.shortName} logo`}
+              className="h-full w-full object-contain"
+            />
           </span>
           <span className="flex min-w-0 flex-col leading-tight">
             <span className="truncate text-[13px] font-semibold text-neutral-950 sm:text-sm">
