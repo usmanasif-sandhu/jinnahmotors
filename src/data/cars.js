@@ -63,7 +63,7 @@ export const CARS = [
     id: 'bmw-i8',
     name: 'BMW i8',
     category: 'ultra-luxury',
-    pricePerDay: 250000,
+    pricePerDay: 210000,
     image: BMW_I8_IMAGE,
     alt: '2015 BMW i8 I12 coupe hybrid sports car rental Pakistan',
     featured: true,
