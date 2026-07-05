@@ -8,7 +8,7 @@ export const SITE = {
   email: 'akmalwarraich986@gmail.com',
   addressLine:
     'Rehman Shaheed Road, Shell Pump Chowk, Shadman Colony, Gujrat',
-  mapEmbedQuery: 'Shell+Pump+Chowk+Shadman+Colony+Gujrat+Pakistan',
+  mapEmbedQuery: 'JINNAH+MOTORS+%26+RENT+A+CAR+GUJRAT',
   url: 'https://jinnahmotors.pk',
   cities: ['Gujrat', 'Lahore', 'Islamabad', 'Gujranwala'],
 }
