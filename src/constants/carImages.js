@@ -1,5 +1,5 @@
 /** Local fleet image served from /public */
-export const DEFAULT_CAR_IMAGE = '/car%20pic.jpeg'
+export const DEFAULT_CAR_IMAGE = '/car%20pic.webp'
 
 export const heroImage = DEFAULT_CAR_IMAGE
 

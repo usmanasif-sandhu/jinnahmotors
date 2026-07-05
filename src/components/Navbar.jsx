@@ -53,7 +53,7 @@ export default function Navbar() {
         >
           <span className="relative flex h-9 w-9 shrink-0 items-center justify-center">
             <img
-              src="/logo.png"
+              src="/logo.webp"
               alt={`${SITE.shortName} logo`}
               className="h-full w-full object-contain"
             />
