@@ -112,13 +112,13 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
             >
               <motion.div
-                initial={{ y: '-6%', opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: '-4%', opacity: 0 }}
-                transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-                className="glass absolute right-4 top-24 flex w-[min(92vw,400px)] flex-col gap-1 rounded-[22px] p-6 text-left shadow-2xl"
-                onClick={(e) => e.stopPropagation()}
-              >
+  initial={{ y: '-6%', opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  exit={{ y: '-4%', opacity: 0 }}
+  transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+  className="absolute right-4 top-24 flex w-[min(92vw,400px)] flex-col gap-1 rounded-[22px] border border-neutral-200 bg-white p-6 text-left shadow-2xl"
+  onClick={(e) => e.stopPropagation()}
+>
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-neutral-500">
                   {SITE.name}
                 </p>
