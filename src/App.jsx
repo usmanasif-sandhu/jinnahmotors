@@ -13,12 +13,26 @@ import Testimonials from './components/Testimonials'
 import WhatsAppFloat from './components/WhatsAppFloat'
 import WhyChooseUs from './components/WhyChooseUs'
 
+const MIN_VISIBLE_MS = 250 // just enough to avoid an ugly flash, not an artificial wait
+
 function App() {
   const [booting, setBooting] = useState(true)
 
   useEffect(() => {
-    const id = window.setTimeout(() => setBooting(false), 900)
-    return () => window.clearTimeout(id)
+    const start = performance.now()
+
+    const finish = () => {
+      const elapsed = performance.now() - start
+      const remaining = Math.max(0, MIN_VISIBLE_MS - elapsed)
+      window.setTimeout(() => setBooting(false), remaining)
+    }
+
+    if (document.readyState === 'complete') {
+      finish()
+    } else {
+      window.addEventListener('load', finish, { once: true })
+      return () => window.removeEventListener('load', finish)
+    }
   }, [])
 
   return (
